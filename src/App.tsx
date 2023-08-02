@@ -1,10 +1,18 @@
 import { BrowserRouter } from "react-router-dom";
 import { AppRoutes } from "./routes";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import { LightTheme } from "./shared/themes";
+import { AppThemeProvider } from "./shared/contexts";
 
 export const App = () => {
   return (
-    <BrowserRouter>
-    	<AppRoutes />
-    </BrowserRouter>
+		<AppThemeProvider>
+			<BrowserRouter>
+				<AppRoutes />
+			</BrowserRouter>
+		</AppThemeProvider>
   );
 }
